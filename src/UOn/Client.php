@@ -79,7 +79,10 @@ class Client implements \ArrayAccess
             $this->http_message = $resp->getReasonPhrase();
         }
 
-        return $this->response = new Response($this,$resp);
+        $this->response = new Response($this,$resp);
+        $this->requested = [];
+
+        return $this->response;
     }
 
     public function __call($name,$arguments=[]) {
