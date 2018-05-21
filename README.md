@@ -23,7 +23,7 @@ $ composer require kilylabs/u-on-api-php
 require 'vendor/autoload.php';
 
 $client = new Kily\API\UOn\Client('<API_KEY>',[
-	'timeout'=>60,
+    'timeout'=>60,
     'debug'=>true,
 ]);
 
