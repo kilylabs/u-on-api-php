@@ -1,5 +1,5 @@
 <?php
 
-namespace Kily\Tools1C\OData;
+namespace Kily\API\UOn;
 
 class Exception extends \Exception {}

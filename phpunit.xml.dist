@@ -9,17 +9,16 @@
     convertWarningsToExceptions="true"
     testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader">
     <php>
-        <!-- You should put here yout 1C OData URL -->
-        <!--<server name="URL_ODATA_1C" value="http://HOSTNAME/BASE/odata/standard.odata/" />-->
-        <!-- Set your creditails-->
-        <!--<server name="LOGIN" value="YOUR LOGIN HERE" />-->
-        <!--<server name="PASSWORD" value="YOUR PASSWORD HERE" />-->
+        <!-- API KEY -->
+        <!--<server name="API_KEY" value="ololo" />-->
         <!-- This will allow CREATE, UPDATE and DELETE operations. USE WITH CAUTION!!! -->
         <!--<server name="ALLOW_UNSAFE_OPERATIONS" value="true" />-->
+        <!-- This wil allow guzzle debug -->
+        <!--<server name="DEBUG" value="true" />-->
     </php>
     <testsuites>
         <testsuite>
-            <directory>tests/OData/Tests</directory>
+            <directory>tests/UOn/Tests</directory>
         </testsuite>
     </testsuites>
 

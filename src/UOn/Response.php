@@ -1,6 +1,6 @@
 <?php
 
-namespace Kily\Tools1C\OData;
+namespace Kily\API\UOn;
 
 use Psr\Http\Message\ResponseInterface;
 
@@ -17,23 +17,13 @@ class Response
     }
 
     public function __toString() {
-        return $this->response->getBody();
+        return $this->response->getBody()->__toString();
     }
 
     public function toArray() {
         if(!$this->arr)
             $this->arr = json_decode($this->response->getBody(),true);
         return $this->arr;
-    }
-
-    public function values() {
-        $arr = $this->toArray();
-        return isset($arr['value']) ? $arr['value'] : (isset($arr['Ref_Key']) ? [$arr] : []);
-    }
-
-    public function first() {
-        $vals = $this->values();
-        return isset($vals[0]) ? $vals[0] : null;
     }
 
 }
